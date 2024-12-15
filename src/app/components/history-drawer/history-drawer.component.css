@@ -1,0 +1,79 @@
+.history-drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.history-drawer.open {
+  right: 0;
+}
+
+.toggle-btn {
+  position: absolute;
+  left: -80px;
+  top: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.drawer-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--background);
+  border: 1px solid var(--primary-light);
+}
+
+.history-item.deleted {
+  opacity: 0.6;
+  background: #f0f0f0;
+}
+
+.message-preview {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.timestamp {
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.item-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
